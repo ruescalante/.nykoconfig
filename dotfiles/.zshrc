@@ -31,13 +31,6 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-# fnm
-FNM_PATH="/home/ruben/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -68,20 +61,14 @@ alias ssh='ssh.exe'
 alias ssh-add='ssh-add.exe'
 alias vim='nvim'
 alias p='pnpm'
+
 #Path
 export PATH=$PATH:/usr/local/go/bin
 export JAVA_HOME=$HOME/.java/jdk/jdk-21.0.6+7
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+
 # Shell integrations
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(fzf --zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init --cmd cd zsh)"
-
-
-# bun completions
-[ -s "/home/ruben/.bun/_bun" ] && source "/home/ruben/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
