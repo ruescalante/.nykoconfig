@@ -72,4 +72,8 @@ else
   echo "Default shell is already zsh."
 fi
 
+# Cambiar el URL del repositorio remoto
+echo "Setting remote origin URL..."
+git remote set-url origin git@github.com:ruescalante/.nykoconfig.git
+
 echo "Setup complete!"
