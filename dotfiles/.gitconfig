@@ -1,0 +1,18 @@
+[init]
+	defaultBranch = main
+[core]
+	sshCommand = ssh.exe
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = "/home/ruben/.config/git/allowed_signers"
+	program = "/mnt/c/Users/CHABO/AppData/Local/1Password/app/8/op-ssh-sign-wsl"
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKnF9Km65dCqZovMN3Eig23FSYzwVTkSoKu6al/ZA/gS
+	email = "rubenescalantesv@gmail.com"
+	name = "ruescalante"
+[tag]
+	forceSignAnnotated = true
+
