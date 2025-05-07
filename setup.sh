@@ -21,11 +21,11 @@ fi
 
 # Actualizar lista de paquetes
 echo "Updating package list..."
-sudo apt update
+sudo pacman -Syu
 
 # Instalar paquetes necesarios (asegurarse de que git está instalado si no lo estaba)
 echo "Installing required packages..."
-sudo apt install -y zsh curl wget git
+sudo pacman -S zsh curl wget git
 
 # Crear enlaces simbólicos para los dotfiles
 echo "Creating symbolic links for dotfiles..."
